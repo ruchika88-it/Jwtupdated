@@ -7,7 +7,7 @@ const registerValidation = data => {
     firstname: Joi
               .string()
               .required(),
-    lastname: Joi
+    lastname: Joi 
               .string()
               .required(),
     emailid: Joi
@@ -52,6 +52,8 @@ const profileValidation = data => {
     return validationSchema.validate(data);
   };
 
-module.exports.registerValidation = registerValidation;
-module.exports.loginValidation = loginValidation;
-module.exports.profileValidation= profileValidation;
+module.exports={
+  registerValidation : registerValidation,
+   loginValidation : loginValidation,
+   profileValidation : profileValidation
+}
